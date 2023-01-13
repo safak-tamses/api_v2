@@ -1,4 +1,4 @@
-package com.example.api_v2.auth;
+package com.example.api_v2.user.jwt_authentication.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package com.example.api_v2.config;
+package com.example.api_v2.user.jwt_authentication.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

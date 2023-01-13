@@ -1,6 +1,6 @@
-package com.example.api_v2.auth;
+package com.example.api_v2.user.jwt_authentication.auth;
 
-import com.example.api_v2.config.JwtService;
+import com.example.api_v2.user.jwt_authentication.config.JwtService;
 import com.example.api_v2.user.Role;
 import com.example.api_v2.user.User;
 import com.example.api_v2.user.UserRepository;

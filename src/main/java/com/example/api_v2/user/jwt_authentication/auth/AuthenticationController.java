@@ -1,4 +1,4 @@
-package com.example.api_v2.auth;
+package com.example.api_v2.user.jwt_authentication.auth;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v2/auth")
 @RequiredArgsConstructor
 public class AuthenticationController {
-    private AuthenticationService service;
+    private final AuthenticationService service;
 
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
