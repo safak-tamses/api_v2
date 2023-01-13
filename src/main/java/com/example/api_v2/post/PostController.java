@@ -1,10 +1,8 @@
 package com.example.api_v2.post;
 
 import com.example.api_v2.post.Exceptions.PostNotFoundException;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,7 +15,7 @@ public class PostController {
     public PostService service;
 
     @GetMapping("/{userId}/{postId}")
-    public Post showPostsForUser(@PathVariable Integer userId, @PathVariable Integer postId) throws PostNotFoundException {
+    public Optional<Post> showPostsForUser(@PathVariable Integer userId, @PathVariable Integer postId) throws PostNotFoundException {
         return service.getPostById(userId, postId);
     }
 
