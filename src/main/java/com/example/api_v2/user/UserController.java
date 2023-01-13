@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/v2/auth/user")
 @RequiredArgsConstructor
 public class UserController {
     UserService userService;
