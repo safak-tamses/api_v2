@@ -9,11 +9,14 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v2/auth/user")
+@RequestMapping("/api/v1/user")
 @RequiredArgsConstructor
 public class UserController {
     UserService userService;
-
+    @GetMapping("/test")
+    public ResponseEntity response(){
+        return ResponseEntity.ok("testtir lo");
+    }
     @GetMapping("/{userId}")
     public Optional<User> getUserWithId(@PathVariable Integer userId) {
         return userService.getUserWithId(userId);

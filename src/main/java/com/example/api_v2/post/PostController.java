@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v2/auth/post")
+@RequestMapping("/api/v1/auth/post")
 public class PostController {
     public PostService service;
 

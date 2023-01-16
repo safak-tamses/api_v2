@@ -1,6 +1,8 @@
 package com.example.api_v2.user;
 
-public enum UserRole {
+
+public enum Role {
+
     USER,
     ADMIN
 }

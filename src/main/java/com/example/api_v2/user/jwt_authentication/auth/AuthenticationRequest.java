@@ -1,5 +1,6 @@
 package com.example.api_v2.user.jwt_authentication.auth;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AuthenticationRequest {
+
     private String email;
-    private String password;
+    String password;
 }

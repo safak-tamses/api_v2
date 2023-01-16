@@ -1,5 +1,6 @@
 package com.example.api_v2.user.jwt_authentication.config;
 
+import jakarta.servlet.Filter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +14,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
-public class SecurityConfigration {
+public class SecurityConfiguration {
+
     private final JwtAuthenticationFilter jwtAuthFilter;
     private final AuthenticationProvider authenticationProvider;
 
@@ -23,8 +25,7 @@ public class SecurityConfigration {
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/api/v2/auth/**")
-//                .requestMatchers("/**")
+                .requestMatchers("/api/v1/auth/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
@@ -38,3 +39,4 @@ public class SecurityConfigration {
         return http.build();
     }
 }
+
